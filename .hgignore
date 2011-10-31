@@ -24,4 +24,9 @@ syntax: glob
 *.toc
 *.swp
 .*.swp
+*.zip
+*.tar.gz
+*.tar.bz
+?
 build
+tds
