@@ -88,6 +88,11 @@
 %
 % The package currently test if \Macro\eTeXversion is defined as a primitive and assumes \eTeX\ if so.
 %
+% Note that almost all modern \LaTeX\ distributions use \eTeX.
+% The two major distributions \TeX\ Live and Mik\TeX\ support it and use it by default (except for the classic |tex|).
+% The \LaTeX\ which comes with \emph{Scientific Work Place} by MacKichan seems to not support \eTeX\ yet.
+% Package authors can use this package to test for missing \eTeX\ and provide fall-back code.
+%
 % \StopEventually{}
 % \section{Implementation}
 %
