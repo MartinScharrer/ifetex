@@ -1,4 +1,4 @@
-CONTRIBUTION  = $(shell basename ${PWD})
+CONTRIBUTION  = ifetex
 NAME          = Martin Scharrer
 EMAIL         = martin@scharrer.me
 DIRECTORY     = /macros/latex/contrib/${CONTRIBUTION}
