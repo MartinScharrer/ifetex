@@ -12,8 +12,8 @@
 % \begin{macro}{ifetex}
 % Checks if \Macro\eTeXversion is a primitive.
 %    \begin{macrocode}
-\newif\ifetex
 \begingroup
+\newif\ifetex
 \edef\tempa{\meaning\eTeXversion}%
 \edef\tempb{\string\eTeXversion}%
 \ifx\tempa\tempb
@@ -21,6 +21,7 @@
 \else
     \global\etexfalse
 \fi
+\global\let\ifetex\ifetex
 \endgroup
 %    \end{macrocode}
 % \end{macro}
