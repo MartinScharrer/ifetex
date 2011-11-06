@@ -13,15 +13,13 @@
 % Checks if \Macro\eTeXversion is a primitive.
 %    \begin{macrocode}
 \begingroup
-\newif\ifetex
 \edef\tempa{\meaning\eTeXversion}%
 \edef\tempb{\string\eTeXversion}%
 \ifx\tempa\tempb
-    \global\etextrue
+    \global\expandafter\let\csname ifetex\expandafter\endcsname\csname iftrue\endcsname
 \else
-    \global\etexfalse
+    \global\expandafter\let\csname ifetex\expandafter\endcsname\csname iffalse\endcsname
 \fi
-\global\let\ifetex\ifetex
 \endgroup
 %    \end{macrocode}
 % \end{macro}
