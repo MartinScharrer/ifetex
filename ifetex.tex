@@ -16,10 +16,11 @@
 \edef\tempa{\meaning\eTeXversion}%
 \edef\tempb{\string\eTeXversion}%
 \ifx\tempa\tempb
-    \global\expandafter\let\csname ifetex\expandafter\endcsname\csname iftrue\endcsname
+    \endgroup
+    \expandafter\let\csname ifetex\expandafter\endcsname\csname iftrue\endcsname
 \else
-    \global\expandafter\let\csname ifetex\expandafter\endcsname\csname iffalse\endcsname
+    \endgroup
+    \expandafter\let\csname ifetex\expandafter\endcsname\csname iffalse\endcsname
 \fi
-\endgroup
 %    \end{macrocode}
 % \end{macro}
