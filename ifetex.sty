@@ -12,3 +12,32 @@
 %    \begin{macrocode}
 \@@input ifetex
 %    \end{macrocode}
+%
+%
+% \begin{macro}{\NeedsETeX}[1]{optional version number (x.y)}
+% Produces error if e-TeX is not available or if its version is too old.
+%    \begin{macrocode}
+\newcommand*\NeedsETeX[1][]{%
+  \ifetex
+    \ifx\@nnil#1\@nnil\else
+    \ifdim\the\eTeXversion\eTeXrevision\p@<#1\p@\relax
+      \@latex@error{This file needs e-TeX with version #1%
+      \MessageBreak but only version \the\eTeXversion\eTeXrevision is available}{%
+        The current input file will not be processed
+        further,\MessageBreak
+        because it was written for a newer version of e-TeX.
+        \MessageBreak\@ehd}%
+      \endinput
+    \fi\fi
+  \else
+    \@latex@error{This file needs e-TeX}{%
+      The current input file will not be processed
+      further,\MessageBreak
+      because it was written for e-TeX which is not available.
+      \MessageBreak\@ehd}%
+    \endinput
+  \fi
+}
+%    \end{macrocode}
+% \end{macro}
+%
