@@ -1,9 +1,9 @@
 LaTeX package 'ifetex'
 ~~~~~~~~~~~~~~~~~~~~~~
-Copyright (c) 2011-2018 by Martin Scharrer <martin@scharrer-online.de>
+Copyright (c) 2011-2022 by Martin Scharrer <martin.scharrer@web.de>
 CTAN: http://www.ctan.org/pkg/ifetex
-Code repository: https://bitbucket.org/martin_scharrer/ifetex
-Issue tracker: https://bitbucket.org/martin_scharrer/ifetex/issues
+Code repository: https://github.com/MartinScharrer/ifetex/
+Issue tracker: https://github.com/MartinScharrer/ifetex/issues
 
 This small package provides the if-switch \ifetex which indicated whether
 e-TeX is available or not.
